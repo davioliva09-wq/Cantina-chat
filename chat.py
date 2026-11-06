@@ -86,14 +86,14 @@ if prompt := st.chat_input("Como posso te ajudar hoje?"):
         resposta = "O pão de queijo quentinho sai por **R$ 4,00** 🧀."
         
     # 5. Proibições e Informações Gerais
-    elif any(palavra in texto_usuario for palavra in ["refrigerante", "coca", "frito", "fritura", "suco"]):
-        resposta = f"Não trabalhamos com fritos ou refrigerantes por regras de saúde da escola! 🍎 Nossos sucos naturais são:\n\n{CARDAPIO['bebidas']}"
+   # elif any(palavra in texto_usuario for palavra in ["refrigerante", "coca", "frito", "fritura", "suco"]):
+       # resposta = f"Não trabalhamos com fritos ou refrigerantes por regras de saúde da escola! 🍎 Nossos sucos naturais são:\n\n{CARDAPIO['bebidas']}"
         
     elif any(palavra in texto_usuario for palavra in ["saldo", "cartao", "cartão", "pagar", "recarga"]):
         resposta = "Para consultar o saldo do aluno ou fazer recargas, por favor procure a secretaria da escola ou acesse o portal dos pais 💳."
         
     else:
-        resposta = "Sou o ConradoGPT, o assistente da cantina! 🍔 Tente perguntar sobre o **cardápio**, sobre os **doces**, o preço da **coxinha** ou qual o produto **mais barato**!"
+        resposta = "Sou o ConradoGPT, o assistente da cantina! 🍔 Tente perguntar sobre o **cardápio**, sobre os **doces**, o preço da **coxinha** ou qual o produto **mais barato**! ou qualquer dúvida que tiver!!"
 
     with st.chat_message("assistant"):
         st.markdown(resposta)
